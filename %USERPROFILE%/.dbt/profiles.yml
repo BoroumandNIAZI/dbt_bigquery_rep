@@ -1,0 +1,13 @@
+dbt_bigquery:
+  outputs:
+    dev:
+      dataset: dbt_sourena
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: dbt-project-428115
+      threads: 60
+      type: bigquery
+  target: dev

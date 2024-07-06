@@ -1,7 +1,7 @@
 version: 2
 sources:
   - name: thelook_ecommerce
-    database: bigquery_public_data
+    database: bigquery-public-data
     tables:
       - name: inventory_items
       - name: order_items
