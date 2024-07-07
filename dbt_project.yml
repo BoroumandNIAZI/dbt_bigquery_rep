@@ -13,3 +13,6 @@ target-path: "target"
 clean-targets: 
   - "target"
   - "dbt_packages"
+models:
+  dbtbigquery:
+    +materialized: table
