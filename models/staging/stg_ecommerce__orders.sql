@@ -9,13 +9,16 @@ with source as (
 
 )
 select 
+    -- IDs
     order_id,
     user_id,
-    status,
+    -- Timestamps
     created_at,
     returned_at,
     shipped_at,
     delivered_at,
-    num_of_item
+    -- Other columns
+    status,
+    num_of_item as num_items_ordered
 from source
 
