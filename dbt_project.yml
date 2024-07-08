@@ -16,3 +16,6 @@ clean-targets:
 models:
   dbtbigquery:
     +materialized: table
+    +persist_docs:
+      relation: true
+      columns: true
