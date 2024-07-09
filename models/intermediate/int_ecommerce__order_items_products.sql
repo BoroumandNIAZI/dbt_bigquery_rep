@@ -25,3 +25,4 @@ select
 from {{ref("stg_ecommerce__order_items")}} as order_items
 left join products
     on order_items.product_id = order_items.product_id
+where order_items.user_id <= 1000
