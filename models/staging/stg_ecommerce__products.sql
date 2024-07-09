@@ -23,3 +23,4 @@ SELECT
 	#}
 
 FROM source
+where id <= 10000

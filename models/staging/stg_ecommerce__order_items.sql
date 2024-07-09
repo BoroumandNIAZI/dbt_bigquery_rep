@@ -30,3 +30,4 @@ SELECT
 	#}
 
 FROM source
+where id <= 90000
