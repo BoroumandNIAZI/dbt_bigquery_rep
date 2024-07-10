@@ -35,6 +35,7 @@ models:
         description: "When the order was shipped"
 
       - name: order_status
+        description: "{{ doc('status') }}"
         
 
       - name: num_items_ordered
@@ -48,7 +49,7 @@ models:
         tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_between:
-              min_value = 0
+              min_value : 0
           
 
       - name: total_product_cost
@@ -56,7 +57,7 @@ models:
         tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_between:
-              min_value = 0
+              min_value : 0
           
 
       - name: total_profit
@@ -64,7 +65,7 @@ models:
         tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_between:
-              min_value = 0
+              min_value : 0
           
 
       - name: total_discount
@@ -72,7 +73,7 @@ models:
         tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_between:
-              min_value = 0
+              min_value : 0
           
 
       
