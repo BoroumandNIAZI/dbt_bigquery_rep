@@ -10,8 +10,11 @@ models:
       - name: order_item_id
         # Model tests (run AFTER model is built)
         tests:
-          - primary_key:
+          - not_null:
               severity: error
+          - unique:
+              severity: error
+              
         # Model contract (run BEFORE model is built)
         data_type: INTEGER
         constraints:
@@ -45,4 +48,4 @@ models:
         tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
+              min_value: 100
