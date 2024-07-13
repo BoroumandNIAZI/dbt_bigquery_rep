@@ -18,7 +18,7 @@ select
     o.num_items_ordered,
     od.num_of_items_in_order,
 
-from {{ref("stg_ecommerce__orders")}} o
+from `dbt_sourena`.`stg_ecommerce__orders` o  {# old command: {{ref("stg_ecommerce__orders")}}  #}
 full outer join order_details od using(order_id)
 where
     o.order_id is null
